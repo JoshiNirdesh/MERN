@@ -97,3 +97,12 @@ console.log(name2);
 let color = ["red", "green", "blue", "yellow", "pink"];
 let color1 = color.includes("blue");
 console.log(color1);
+
+console.log(color);
+
+let courses=[
+    {name:"Java", status:true },
+    {name: "c",   status:false},
+    {name: "MERN",status:true},
+    {name : "C++" status :false}
+]
