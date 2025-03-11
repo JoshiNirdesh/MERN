@@ -47,4 +47,9 @@ let countries = [
     }
     return "Not found";
   }
- console.log(findMyCountryCode("Nepal")); 
+ const countryName = "japan"
+ const country=findMyCountryCode(countryName); 
+
+ //template literal
+
+ console.log (`the country code of ${countryName} is`, country);

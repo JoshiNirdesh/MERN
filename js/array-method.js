@@ -104,5 +104,5 @@ let courses=[
     {name:"Java", status:true },
     {name: "c",   status:false},
     {name: "MERN",status:true},
-    {name : "C++" status :false}
+    {name : "C++", status :false}
 ]
