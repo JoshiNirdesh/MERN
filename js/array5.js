@@ -71,12 +71,12 @@ const registerUser=(name)=>{
 const findUser = registerUser("shyam");
 
 //assignment
-let phoneNumber="14785236934"
+let phoneNumber=14785236934
 
 function maskPhoneNumber(phoneNumber) {
     const numberToString = phoneNumber.toString();
-    const lastFour = numberToString.slice(-2);
+    const lastTwo = numberToString.slice(-2);
     const maskedPart = "x".repeat(numberToString.length - 2);
-    return maskedPart + lastFour;
+    return maskedPart + lastTwo;
   }
   console.log(maskPhoneNumber(phoneNumber));
