@@ -9,8 +9,13 @@ let user={
 // localStorage.setItem("token", response.token);
 // localStorage.setItem("token1","fdfdf23434");
 
-console.log(user.name);
+// console.log(user.name);
 let stringUser=JSON.stringify(user);
 
-console.log("This is stringify", stringUser);
-console.log(stringUser.name)
+// console.log("This is stringify", stringUser);
+// console.log(stringUser.name)
+
+// let token1=localStorage.getItem("token1");
+// let user1=localStorage.getItem("user1");
+let user2=JSON.parse(stringUser);
+console.log(user2.name);
