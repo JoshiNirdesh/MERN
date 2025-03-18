@@ -6,7 +6,6 @@
 // console.log("Sum: ", addNumber);
 
 // call backfunction
-
 function fetchData(c){
     console.log("Api is fetching");
     setTimeout(()=>{
@@ -17,3 +16,5 @@ fetchData((m)=>{
     console.log(m);
     
 })
+
+//
