@@ -39,4 +39,34 @@ promise.then((data)=>{
     console.log("error");
 });
 
-//test
+//asyn and await
+
+const fetchData = async()=>{
+    try{
+
+        let response=await fetch('https://jsonplaceholder.typicode.com/todos/1');
+
+    let data=response.json();
+    console.log("this is  response",data);
+
+    }
+    catch(error){
+        throw new Error("internal error");
+    }
+    
+
+}
+fetchData();
+
+const myPromise = new Promise (resolve,reject)=>{
+    setTimeout(() => {
+        let success=true;
+        if(success){
+            resolve("data from promise")
+        }
+        else{
+            reject("error on line 2")
+        }
+    }, 2000);
+}
+myPromise.then(message)
