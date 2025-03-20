@@ -18,15 +18,26 @@
 // })
 
 //
-//Asynchronous
-console.log("one");
-console.log("two");
+// //Asynchronous
+// console.log("one");
+// console.log("two");
 
 
-setTimeout(()=>{
-    console.log("hello");
+// setTimeout(()=>{
+//     console.log("hello");
 
-},2000)
+// },2000)
 
-console.log("three");
-console.log("four");
+// console.log("three");
+// console.log("four");
+
+// call back
+
+function sum(a,b){
+    console.log(a+b);
+}
+function calculator (a,b,sumCallBack){
+    sumCallBack(a,b);
+}
+calculator (1,2,sum);
+
