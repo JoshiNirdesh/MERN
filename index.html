@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>News Headlines</title>
+    <style>
+        .main{
+            border: 1px solid black;
+            background-color: lightgrey;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="main">
+    <h1>News Title</h1>
+    <ul id="news-list"></ul>
+    </div>
+
+    <script>
+        async function fetchNewsTitles() {
+            try {
+                const response = await fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=73e97741ac4546668f6137396731af9b');
+                const data = await response.json();
+                
+                const newsList = document.getElementById('news-list');
+                
+                if (data.articles) {
+                    newsList.innerHTML = data.articles.map(article => `<li>${article.title}</li>`).join('');
+                } else {
+                    newsList.innerHTML = '<li>No articles found</li>';
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        fetchNewsTitles();
+    </script>
+
+    <!-- js dom -->
+     
+        <button id="mybtn">Click Me</button> 
+        <p id="mytext"></p>
+    <script>
+            const button=document.getElementById('mybtn');
+            const demo = document.getElementById('mytext');
+
+            button.addEventListener("click",function(){
+                demo.textContent="Clicked me";
+            })
+    </script>
 </body>
 </html>
